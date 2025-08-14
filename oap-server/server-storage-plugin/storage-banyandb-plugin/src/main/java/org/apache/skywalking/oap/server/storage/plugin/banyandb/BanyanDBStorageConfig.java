@@ -96,6 +96,14 @@ public class BanyanDBStorageConfig extends ModuleConfig {
          * single request.
          */
         private int asyncProfilerTaskQueryMaxSize;
+        /**
+         * If the BanyanDB server is configured with Basic Auth, config the username.
+         */
+        private String username;
+        /**
+         * If the BanyanDB server is configured with Basic Auth, config the password.
+         */
+        private String password;
 
         private int resultWindowMaxSize = 10000;
         private int metadataQueryMaxSize = 5000;

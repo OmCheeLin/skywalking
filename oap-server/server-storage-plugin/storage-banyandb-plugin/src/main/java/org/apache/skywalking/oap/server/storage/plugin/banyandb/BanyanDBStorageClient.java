@@ -70,6 +70,8 @@ public class BanyanDBStorageClient implements Client, HealthCheckable {
     public BanyanDBStorageClient(BanyanDBStorageConfig config) {
         Options options = new Options();
         options.setSslTrustCAPath(config.getGlobal().getSslTrustCAPath());
+        options.setUsername(config.getGlobal().getUsername());
+        options.setPassword(config.getGlobal().getPassword());
         this.client = new BanyanDBClient(config.getTargetArray(), options);
         this.flushTimeout = config.getGlobal().getFlushTimeout();
     }
